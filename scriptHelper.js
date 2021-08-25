@@ -82,6 +82,8 @@ function formSubmission(document, list, pilotValue, copilotValue, fuelLevelValue
 
   if (validateInput(document) === 'Empty'||validateInput(list) === 'Empty'||validateInput(pilotValue) === 'Empty'||validateInput(copilotValue) === 'Empty'||validateInput(fuelLevelValue) === 'Empty'||validateInput(cargoLevelValue) === 'Empty'){
     alert('All fields required.');
+  } else if (validateInput(pilotValue) === 'Is a Number'||validateInput(copilotValue) === 'Is a Number'){
+    alert('Pilot and Copilot fields require valid information.');
   } else if (validateInput(fuelLevelValue) === 'Not a Number'||validateInput(cargoLevelValue) === 'Not a Number'){
     alert('Fuel Level (L) and Cargo Mass (kg) must be a number value.');
   }
